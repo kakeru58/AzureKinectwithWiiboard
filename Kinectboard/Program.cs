@@ -95,7 +95,7 @@ namespace KinectCSV
                                             "EAR_LEFT_X,EAR_LEFT_Y,EAR_LEFT_Z," +
                                             "EYE_RIGHT_X,EYE_RIGHT_Y,EYE_RIGHT_Z," +
                                             "EAR_RIGHT_X,EAR_RIGHT_Y,EAR_RIGHT_Z," +
-                                            "Weight(kg),B_TopLeft(kg),B_TopRight(kg),B_UnderLeft(kg),B_UnderRight(kg)" +
+                                            "Weight(kg),B_TopLeft(kg),B_TopRight(kg),B_UnderLeft(kg),B_UnderRight(kg),B_Center_X(cm),B_Center_Y(cm)" +
                                             "\n");
             }
 
@@ -139,7 +139,7 @@ namespace KinectCSV
                                         file.Write(skeleton.GetJoint(i).Position.X + "," + skeleton.GetJoint(i).Position.Y + "," + skeleton.GetJoint(i).Position.Z + ",");
                                     }
 
-                                    file.Write(bbs.WeightKg + "," + bbs.SensorValuesKg.TopLeft / 4 + "," + bbs.SensorValuesKg.TopRight / 4 + "," + bbs.SensorValuesKg.BottomLeft / 4 + "," + bbs.SensorValuesKg.BottomRight / 4);
+                                    file.Write(bbs.WeightKg + "," + bbs.SensorValuesKg.TopLeft / 4 + "," + bbs.SensorValuesKg.TopRight / 4 + "," + bbs.SensorValuesKg.BottomLeft / 4 + "," + bbs.SensorValuesKg.BottomRight / 4 + "," + bbs.CenterOfGravity.X + "," + bbs.CenterOfGravity.Y);
                                     file.Write("\n");
                                     Console.WriteLine(bbs.WeightKg + "[kg]");
 
