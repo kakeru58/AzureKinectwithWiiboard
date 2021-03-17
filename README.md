@@ -7,4 +7,6 @@ balanceboardはBluetoothでつなげてください。
 
 - AzureKinectSDK
 
+- AzureKinectBodyTracking
+
 - Wiimote
